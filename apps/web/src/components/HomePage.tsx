@@ -36,7 +36,7 @@ export default function HomePage() {
             <main className="flex-1">
                 {/* Hero Section */}
                 <section className="relative py-20 lg:py-32 bg-gradient-to-br from-slate-900 via-slate-800 to-emerald-900">
-                    <div className="absolute inset-0 bg-[url('/placeholder.svg?height=800&width=1200')] opacity-10 bg-cover bg-center" />
+                    <div className="absolute inset-0 opacity-10 bg-cover bg-center" />
                     <div className="container relative mx-auto">
                         <div className="grid lg:grid-cols-2 gap-12 items-center">
                             <div className="space-y-8">
@@ -80,7 +80,7 @@ export default function HomePage() {
                             <div className="relative">
                                 <div className="relative z-10">
                                     <Image
-                                        src="/placeholder.svg?height=600&width=500"
+                                        src="/patch-me-1.png?height=600&width=500"
                                         alt="Приклади персоналізованих шевронів"
                                         width={500}
                                         height={600}
@@ -348,7 +348,7 @@ export default function HomePage() {
                             </div>
                             <div className="relative">
                                 <Image
-                                    src="/placeholder.svg?height=400&width=500"
+                                    src="/ImagePixel.png?height=400&width=500"
                                     alt="Доставка патчів"
                                     width={500}
                                     height={400}

@@ -16,20 +16,34 @@ export default function HomePage() {
                         <span className="text-2xl font-bold text-slate-900">PatchMe</span>
                     </div>
                     <nav className="hidden md:flex items-center space-x-6">
-                        <Link to="#how-it-works" className="text-sm font-medium hover:text-emerald-600 transition-colors">
+                        <button 
+                            onClick={() => document.getElementById('how-it-works')?.scrollIntoView({behavior: 'smooth'})} 
+                            className="text-sm font-medium hover:text-emerald-600 transition-colors"
+                        >
                             Як працює
-                        </Link>
-                        <Link to="#options" className="text-sm font-medium hover:text-emerald-600 transition-colors">
+                        </button>
+                        <button 
+                            onClick={() => document.getElementById('options')?.scrollIntoView({behavior: 'smooth'})} 
+                            className="text-sm font-medium hover:text-emerald-600 transition-colors"
+                        >
                             Опції
-                        </Link>
-                        <Link to="#delivery" className="text-sm font-medium hover:text-emerald-600 transition-colors">
+                        </button>
+                        <button 
+                            onClick={() => document.getElementById('delivery')?.scrollIntoView({behavior: 'smooth'})} 
+                            className="text-sm font-medium hover:text-emerald-600 transition-colors"
+                        >
                             Доставка
-                        </Link>
-                        <Link to="#contact" className="text-sm font-medium hover:text-emerald-600 transition-colors">
+                        </button>
+                        <button 
+                            onClick={() => document.getElementById('contact')?.scrollIntoView({behavior: 'smooth'})} 
+                            className="text-sm font-medium hover:text-emerald-600 transition-colors"
+                        >
                             Контакти
-                        </Link>
+                        </button>
                     </nav>
-                    <Button className="bg-emerald-600 hover:bg-emerald-700">Створити патч</Button>
+                    <Link to="/constructor">
+                        <Button className="bg-emerald-600 hover:bg-emerald-700">Створити патч</Button>
+                    </Link>
                 </div>
             </header>
 
@@ -53,10 +67,12 @@ export default function HomePage() {
                                     </p>
                                 </div>
                                 <div className="flex flex-col sm:flex-row gap-4">
-                                    <Button size="lg" className="bg-emerald-600 hover:bg-emerald-700 text-lg px-8">
-                                        <Sparkles className="mr-2 h-5 w-5" />
-                                        Створити дизайн
-                                    </Button>
+                                    <Link to="/constructor">
+                                        <Button size="lg" className="bg-emerald-600 hover:bg-emerald-700 text-lg px-8">
+                                            <Sparkles className="mr-2 h-5 w-5" />
+                                            Створити дизайн
+                                        </Button>
+                                    </Link>
                                     <Button
                                         size="lg"
                                         variant="outline"
@@ -368,10 +384,12 @@ export default function HomePage() {
                                 Приєднуйтесь до тисяч задоволених клієнтів, які довіряють нам створення своїх персональних шевронів
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                                <Button size="lg" className="bg-white text-emerald-600 hover:bg-slate-100 text-lg px-8">
-                                    <Sparkles className="mr-2 h-5 w-5" />
-                                    Створити дизайн зараз
-                                </Button>
+                                <Link to="/constructor">
+                                    <Button size="lg" className="bg-white text-emerald-600 hover:bg-slate-100 text-lg px-8">
+                                        <Sparkles className="mr-2 h-5 w-5" />
+                                        Створити дизайн зараз
+                                    </Button>
+                                </Link>
                                 <Button
                                     size="lg"
                                     variant="outline"
@@ -386,7 +404,7 @@ export default function HomePage() {
             </main>
 
             {/* Footer */}
-            <footer className="bg-slate-900 text-white py-12">
+            <footer id="contact" className="bg-slate-900 text-white py-12">
                 <div className="container mx-auto">
                     <div className="grid md:grid-cols-4 gap-8">
                         <div>
